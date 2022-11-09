@@ -96,16 +96,18 @@
     
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">TITLE</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="titulo">
+              <input type="text" class="form-control" id="etitle" placeholder="titulo">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">BODY</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" id="ebody" rows="3"></textarea>
+              <input type="hidden" id="eid" value="0">
+              <input type="hidden" id="euserid" value="0">
             </div>
             ...
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">Guardar</button>
+            <button type="button" class="btn btn-success" onclick="guardarPost()">Guardar</button>
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </div>
@@ -117,16 +119,17 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"> <i class="bi bi-plus-circle m-2"></i>AGREGAR POSTS</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel"> <i class="bi bi-plus-circle m-2"></i>ELIMINAR POSTS</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
 
             <h2>Estas seguro de eliminar este Posts??</h2>
+            <input type="hidden" id="deleteid">
             ...
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">SI</button>
+            <button type="button" class="btn btn-success" onclick="deletePost()">SI</button>
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">NO</button>
           </div>
         </div>
